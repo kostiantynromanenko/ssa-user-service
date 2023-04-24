@@ -1,25 +1,14 @@
 spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${JWT_ISSUER_URI:}
-  datasource:
-    url: ${POSTGRES_DB_URL:jdbc:postgresql://localhost:5432/db}
-    username: ${POSTGRES_DB_USERNAME:}
-    pa ssword: ${POSTGRES_DB_PASSWORD:}
-    driver-class-name: org.postgresql.Driver
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
-    baselineOnMigrate: true
+  data:
+    mongodb:
+      database: ssa
+      uri: ""
 
-aws:
-  access-key: ${AWS_ACCESS_KEY:}
-  access-secret: ${AWS_ACCESS_SECRET:}
-  region: ${AWS_REGION:}
-  cognito:
-    clientId: ${COGNITO_CLIENT_ID:}
-    userPoolId: ${COGNITO_USER_POOL_ID:}
-    connectionTimeout: 2000
-    readTimeout: 2000
+okta:
+  client:
+    orgUrl: https://dev-81265113.okta.com
+    token:
+
+user:
+  groups: >
+    00g953bdfvJ39rtcQ5d7
